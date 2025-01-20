@@ -1,0 +1,24 @@
+{
+  "name": "nexter",
+  "version": "1.0.0",
+  "description": "Nexter webpage",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass ./sass/main.scss ./css/style.css --no-source-map --watch",
+    "devserver": "live-server --browser=firefox",
+    "start": "npm-run-all --parallel devserver sass:watch",
+    "sass:build": "sass sass/main.scss css/style.comp.css --no-source-map",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' ./css/style.comp.css -o ./css/style.prefix.css",
+    "compress:sass": "sass ./css/style.prefix.css ./css/style.css --style=compressed --no-source-map",
+    "build:css": "npm-run-all sass:build prefix:css compress:sass "
+  },
+  "author": "Eldiaby",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "concat": "^1.0.3",
+    "sass": "^1.83.4",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^11.0.0"
+  }
+}
