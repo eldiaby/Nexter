@@ -1,0 +1,7 @@
+@use './variables';
+
+.section-homes {
+  background-color: variables.$color-secondary;
+
+  grid-column: center-start / center-end;
+}

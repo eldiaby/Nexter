@@ -1,0 +1,7 @@
+@use './variables';
+
+.section-features {
+  background-color: variables.$color-grey-light-2;
+
+  grid-column: center-start / center-end;
+}

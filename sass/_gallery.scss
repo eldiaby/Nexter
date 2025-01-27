@@ -1,0 +1,7 @@
+@use './variables';
+
+.section-gallery {
+  background-color: variables.$color-grey-dark-1;
+
+  grid-column: full-start / full-end;
+}
