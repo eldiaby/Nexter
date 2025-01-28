@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  margin: 0;
   font-family: variables.$font-primary;
   color: variables.$color-grey-dark-2;
   font-weight: 300;
@@ -25,16 +26,14 @@ body {
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
 
   grid-template-columns:
-    [sidebar-start] 8.2rem [sidebar-end full-start] minmax(
-      6.4rem,
-      1fr
-    ) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [sidebar-start] 8.2rem [sidebar-end full-start] minmax(6.4rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(6.4rem, 1fr) [full-end];
 
-  // For development perpose
-  & > * {
-    font-size: 3.2rem;
-    padding: 2.4rem;
-    text-align: center;
-  }
+  // // For development perpose
+  // & > * {
+  //   font-size: 3.2rem;
+  //   padding: 2.4rem;
+  //   text-align: center;
+  // }
 }

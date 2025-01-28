@@ -1,7 +1,42 @@
 @use './variables';
 
 .section-features {
-  background-color: variables.$color-grey-light-2;
+  // For development perposes
+  // background-color: variables.$color-grey-light-2;
+
+  margin: 15rem 0;
 
   grid-column: center-start / center-end;
+
+  display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 6.4rem;
+  align-items: start;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 1.8rem;
+  // row-gap: 2.4rem;
+
+  &__icon {
+    fill: variables.$color-primary;
+    width: 4.5rem;
+    height: 4.8rem;
+
+    grid-row: 1 / span 2;
+    transform: translateY(1.2rem);
+  }
+
+  // & .heading-4 {
+  //   margin: 0;
+  // }
+
+  &__text {
+    font-size: 1.8rem;
+    grid-column: 2/-1;
+    margin: 0;
+  }
 }
