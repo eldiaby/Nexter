@@ -10,6 +10,17 @@
 }
 .heading-2 {
   @extend %heading;
+  font-size: 4.2rem;
+  font-style: italic;
+  line-height: 1;
+  text-transform: uppercase;
+
+  &--light {
+    color: variables.$color-grey-light-1;
+  }
+  &--dark {
+    color: variables.$color-grey-dark-1;
+  }
 }
 .heading-3 {
   @extend %heading;

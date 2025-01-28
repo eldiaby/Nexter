@@ -1,0 +1,17 @@
+@use './variables';
+//
+.btn {
+  background-color: variables.$color-primary;
+  color: #fff;
+  border: none;
+  font-family: variables.$font-display;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3.2rem;
+  cursor: pointer;
+  transition: background-color 0.6s;
+
+  &:hover {
+    background-color: variables.$color-primary-dark;
+  }
+}
