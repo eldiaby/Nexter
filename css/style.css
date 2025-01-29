@@ -273,6 +273,32 @@ body {
 .realtors {
   background-color: #101d2c;
   grid-column: col-start 7/full-end;
+  padding: 3.2rem;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  row-gap: 1.8rem;
+}
+.realtors__list {
+  display: grid;
+  grid-template-columns: min-content max-content;
+  align-items: center;
+  column-gap: 1.8rem;
+  row-gap: 5vh;
+}
+.realtors__img {
+  width: 7.2rem;
+  border-radius: 50%;
+  display: block;
+}
+.realtors .heading-4 {
+  margin: 0;
+}
+.realtors__sold {
+  text-transform: uppercase;
+  color: #aaa;
+  margin-top: -0.4rem;
 }
 
 .sidebar {
@@ -366,6 +392,10 @@ body {
 }
 .heading-2--dark {
   color: #54483a;
+}
+
+.heading-3 {
+  font-size: 2.4rem;
 }
 
 .heading-4 {

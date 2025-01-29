@@ -4,4 +4,35 @@
   background-color: variables.$color-secondary;
 
   grid-column: col-start 7 / full-end;
+
+  padding: 3.2rem;
+
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  row-gap: 1.8rem;
+
+  &__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    align-items: center;
+    column-gap: 1.8rem;
+    row-gap: 5vh;
+  }
+  &__img {
+    width: 7.2rem;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .heading-4 {
+    margin: 0;
+  }
+
+  &__sold {
+    text-transform: uppercase;
+    color: variables.$color-grey-light-2;
+    margin-top: -0.4rem;
+  }
 }
