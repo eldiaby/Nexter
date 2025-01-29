@@ -9,7 +9,11 @@
 }
 
 html {
-  font-size: 62.5%; //1rem === 10px;
+  font-size: 62.5%; //1rem === 10px
+
+  @media only screen and (max-width: variables.$bp-largest) {
+    font-size: 50%; //1rem === 8px
+  }
 }
 
 body {
@@ -30,10 +34,16 @@ body {
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(6.4rem, 1fr) [full-end];
 
-  // // For development perpose
-  // & > * {
-  //   font-size: 3.2rem;
-  //   padding: 2.4rem;
-  //   text-align: center;
-  // }
+  @media only screen and (max-width: variables.$bp-large) {
+    grid-template-rows: 6.4rem 80vh min-content 40vw repeat(3, min-content);
+
+    grid-template-columns:
+      [full-start] minmax(6.4rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] minmax(6.4rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: variables.$bp-medium) {
+    grid-template-rows: 6.4rem calc(100vh - 6.4rem);
+  }
 }

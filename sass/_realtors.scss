@@ -13,12 +13,25 @@
   justify-items: center;
   row-gap: 1.8rem;
 
+  @media only screen and (max-width: variables.$bp-medium) {
+    grid-column: 1 / -1;
+    padding-bottom: 4.8rem;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: min-content max-content;
     align-items: center;
     column-gap: 1.8rem;
     row-gap: 5vh;
+
+    @media only screen and (max-width: variables.$bp-medium) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @media only screen and (max-width: variables.$bp-small) {
+      grid-template-columns: min-content max-content;
+    }
   }
   &__img {
     width: 7.2rem;

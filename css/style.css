@@ -7,6 +7,11 @@
 html {
   font-size: 62.5%;
 }
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   margin: 0;
@@ -20,6 +25,17 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8.2rem [sidebar-end full-start] minmax(6.4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6.4rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 62.5em) {
+  .container {
+    grid-template-rows: 6.4rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [full-start] minmax(6.4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6.4rem, 1fr) [full-end];
+  }
+}
+@media only screen and (max-width: 50em) {
+  .container {
+    grid-template-rows: 6.4rem calc(100vh - 6.4rem);
+  }
 }
 
 .section-features {
@@ -169,10 +185,20 @@ body {
   background-position: center;
   padding: 4.2rem 8.2rem 8.2rem 8.2rem;
   display: grid;
-  grid-template-rows: 1fr min-content 6.4rem 1fr;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(6.4rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
   row-gap: 1.8rem;
   justify-content: center;
+}
+@media only screen and (max-width: 50em) {
+  .header {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header {
+    padding: 5.2rem;
+  }
 }
 .header__logo {
   height: 3.2rem;
@@ -200,10 +226,12 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
+  align-items: center;
   column-gap: 3.2rem;
 }
 .header__seenon-logos img {
-  height: 2.4rem;
+  max-height: 2.4rem;
+  max-width: 100%;
   filter: brightness(70%);
 }
 
@@ -280,12 +308,28 @@ body {
   justify-items: center;
   row-gap: 1.8rem;
 }
+@media only screen and (max-width: 50em) {
+  .realtors {
+    grid-column: 1/-1;
+    padding-bottom: 4.8rem;
+  }
+}
 .realtors__list {
   display: grid;
   grid-template-columns: min-content max-content;
   align-items: center;
   column-gap: 1.8rem;
   row-gap: 5vh;
+}
+@media only screen and (max-width: 50em) {
+  .realtors__list {
+    grid-template-columns: repeat(3, min-content max-content);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .realtors__list {
+    grid-template-columns: min-content max-content;
+  }
 }
 .realtors__img {
   width: 7.2rem;
@@ -308,6 +352,14 @@ body {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 62.5em) {
+  .sidebar {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
 
 .nav-btn {
   border: 0;
@@ -316,7 +368,7 @@ body {
   background-color: #fff;
   height: 2px;
   width: 4.5rem;
-  margin-top: 4rem;
+  margin-top: 4.2rem;
 }
 .nav-btn::before, .nav-btn::after {
   background-color: #fff;
@@ -331,6 +383,12 @@ body {
 .nav-btn::after {
   transform: translateY(1.3rem);
 }
+@media only screen and (max-width: 62.5em) {
+  .nav-btn {
+    margin-top: 0;
+    margin-right: 4.2rem;
+  }
+}
 
 .story__pictures {
   background-color: #c69963;
@@ -342,11 +400,23 @@ body {
   grid-template-columns: repeat(6, 1fr);
   align-items: center;
 }
+@media only screen and (max-width: 50em) {
+  .story__pictures {
+    grid-column: 1/-1;
+    padding: 6.4rem;
+  }
+}
 .story__image--1 {
   width: 100%;
   grid-row: 2/6;
   grid-column: 2/6;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-width: 50em) {
+  .story__image--1 {
+    grid-column: 1/5;
+    grid-row: 1/-1;
+  }
 }
 .story__image--2 {
   width: 115%;
@@ -354,6 +424,12 @@ body {
   grid-column: 4/7;
   z-index: 10;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 50em) {
+  .story__image--2 {
+    grid-row: 1/-1;
+    width: 100%;
+  }
 }
 .story__content {
   background-color: #f9f7f6;
@@ -363,6 +439,12 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+@media only screen and (max-width: 50em) {
+  .story__content {
+    grid-column: 1/-1;
+    grid-row: 5/6;
+  }
 }
 .story__text {
   font-size: 1.4rem;
