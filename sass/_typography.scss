@@ -7,7 +7,11 @@
 //
 .heading-1 {
   @extend %heading;
+  font-size: 4.8rem;
+  color: variables.$color-grey-light-1;
+  line-height: 1;
 }
+
 .heading-2 {
   @extend %heading;
   font-size: 4.2rem;
@@ -22,9 +26,11 @@
     color: variables.$color-grey-dark-1;
   }
 }
+
 .heading-3 {
   @extend %heading;
 }
+
 .heading-4 {
   @extend %heading;
   font-size: 1.8rem;
